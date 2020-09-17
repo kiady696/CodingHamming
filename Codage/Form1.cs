@@ -56,6 +56,7 @@ namespace Codage
             //Zaraina 4-blocs ilay binaryStringBuilder 
             List<string> motsDeCode = new List<string>();
             string unBloc = "";
+            string reste = "";
             int count4 = 0;
             while(1 == 1)
             {
@@ -63,12 +64,16 @@ namespace Codage
                 int repere = count4 + 4;
                 if (repere == longueurBrute)
                 {
+                    unBloc = binaryStringBuilder.ToString().Substring(count4, 4);
+                    Console.WriteLine("le ième lettre: " + unBloc);
+
+                    motsDeCode.Add(unBloc);
                     break; //divisible par 4 izay ilay mots de code brute
                 }
                 if (repere > longueurBrute) //raha tsy divisible par 4 kosa de recuperer-na anaty string kely ilay ambiny any am farany
                 {
                     //count4 = count4 - 4;
-                    string reste = binaryStringBuilder.ToString().Substring(count4, (binaryStringBuilder.Length - count4));
+                    reste = binaryStringBuilder.ToString().Substring(count4, (binaryStringBuilder.Length - count4));
                     Console.WriteLine("le reste ho apetaka any am farany indrindra reefa avy midécode: " + reste);
                     break;
                 }
@@ -110,6 +115,9 @@ namespace Codage
             //teste kely anisiana bruit
             List<double> motEnDoubleAsianaBruit = new List<double>();
 
+            //List<string> anasiavana ny valiny
+            List<string> res = new List<string>();
+
             int nbErreurMax = Int32.Parse(this.errorMax.Text); //maka anle nb erreur max input
             Console.WriteLine("le nombre d\'erreur max entré: " + nbErreurMax);
             foreach (string mot in lesMotsCoded)
@@ -136,7 +144,12 @@ namespace Codage
                 if (lesEquationsNonVerifiees.Count != 0)
                 {
                     //Corriger l'erreur de ce mot en fonction des equations qu'il ne verifie pas
-                    Utils.corriger(lesEquationsNonVerifiees, motBruite); //le mot io no ovaina ny bit ray anatiny
+                    string motCorrige = Utils.corriger(lesEquationsNonVerifiees, motBruite); //le mot io no ovaina ny bit ray anatiny
+                    res.Add(motCorrige);
+                }
+                else
+                {
+                    res.Add(motBruite);
                 }
 
 
@@ -150,7 +163,23 @@ namespace Codage
                 Console.WriteLine("le nb d'equation non verifiee pour ce mot: "+lesEquationsNonVerifiees.Count);
                 */
             }
-                //arakaraky ny hoe firy ny equation tsy verifieny sy iza amle telo ny equation tsy verifieny no anoloana ny bit nisy erreur
+            //arakaraky ny hoe firy ny equation tsy verifieny sy iza amle telo ny equation tsy verifieny no anoloana ny bit nisy erreur
+
+            //Decoder-na ilay message (alana ny am positions 0,1 sy 3)
+            Utils.decoder(res);
+
+            //Averina atambatra anaty string anakiray ilay motscorriges sy ilay string kely am farany
+            string messageReçuDecode = "";
+            foreach(string s in res)
+            {
+                messageReçuDecode += s;
+            }
+            messageReçuDecode += reste;
+            Console.WriteLine("Le message à decouper par 7-bloc et à reparser en lettre est: " + messageReçuDecode);
+
+            //10001101101001111010011010011100001  THE ORIGINAL
+            //10001101101001111010011010011100001  WITH ERRORMAX = 1
+            //10111101101001111010001110011100001  WITH ERRORMAX = 2
 
 
             //oetina any amna form hi afficher-na resultat ny mots de code sy ilay string kely apetaka am farany

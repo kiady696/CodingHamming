@@ -57,7 +57,7 @@ namespace Codage
                 
         }
 
-        public static void corriger(List<string> equationsNonVerifiees , string mot)
+        public static string corriger(List<string> equationsNonVerifiees , string mot)
         {
             List<double> motACorriger = new List<double>();
 
@@ -98,6 +98,7 @@ namespace Codage
                 changeBit(motACorriger , 6);
             }
             Console.WriteLine("le mot corrigé est: " + motACorriger[0] + motACorriger[1] + motACorriger[2] + motACorriger[3] + motACorriger[4] + motACorriger[5] + motACorriger[6]);
+            return toStringFromDoubles(motACorriger);
         }
 
 
@@ -132,6 +133,19 @@ namespace Codage
 
 
             return lesEquationsNonVerifiees;
+        }
+
+        public static void decoder(List<string> motsCoded)
+        {
+            
+            for(int i = 0; i<motsCoded.Count; i++)
+            {
+                motsCoded[i] = motsCoded[i].Remove(0, 1); //enleve p0
+                motsCoded[i] = motsCoded[i].Remove(0, 1); //enleve p1
+                motsCoded[i] = motsCoded[i].Remove(1, 1); //enleve p2
+                Console.WriteLine("Le message décodé: " + motsCoded[i]);
+                
+            }
         }
 
 

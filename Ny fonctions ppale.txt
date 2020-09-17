@@ -35,6 +35,19 @@
 		-Fonction de verification si il n'y a pas d'erreur
 		
 			
+	Pour Kiki:
+	1001011110100111010111101001
+	1001011110100111010111101001 1 erreur max
+
+	Pour Kikis: 
+	10010111101001110101111010011110011
+	10010111101001110101111010011110011 1 erreur max
+	10010111101001000101111001111110011 2 erreurs max (1)
+	01110111101001111101111010011110011 2 erreurs max (2)
+
+	Mamerina anle izy ho lettre isaky ny 7 bloc sisa zany 
+	De apseo anaty form ray hafa ohatra ilay fitambaran'ilay lettres am farany ndrindra 
+	
 			
 			
 			
