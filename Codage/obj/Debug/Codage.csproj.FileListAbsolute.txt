@@ -1,0 +1,13 @@
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\Codage.exe.config
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\Codage.exe
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\Codage.pdb
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.csprojAssemblyReference.cache
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.Form1.resources
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.Properties.Resources.resources
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.csproj.GenerateResource.cache
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.csproj.CoreCompileInputs.cache
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.exe
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.pdb
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\MathNet.Numerics.dll
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\MathNet.Numerics.xml
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.csproj.CopyComplete

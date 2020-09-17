@@ -1,0 +1,40 @@
+
+	-Fonction manome List<double> avamna string de mot de code anakray (VITA)
+
+	-Multiplication matrices en base2 mila ovaina tanana mihitsy hoe ze 2=0 & ze 3=1 (VITA)
+
+	-Verification multiplication matricielle ( am tanana cahier sy am net)
+		
+		ex: mot : "Fitia"
+		Le message en binaire: 10001101101001111010011010011100001
+		
+		le reste ho apetaka any am farany indrindra reefa avy midécode: 001
+
+		mots de code rehetra: 
+			1000
+			1101
+			1010
+			0111
+			1010
+			0110
+			1001
+			1100
+
+		Ny matrice genratrice : G cf. pdf hamming(7,4)
+
+		mots codés à verifier: G * mot tsirairay:
+			1110000
+			1010101
+			1011010	
+			0001111
+			1011010
+			1100110
+			0011001
+			0111100
+			
+		-Fonction de verification si il n'y a pas d'erreur
+		
+			
+			
+			
+			
