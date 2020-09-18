@@ -11,3 +11,4 @@ C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.pdb
 C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\MathNet.Numerics.dll
 C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\bin\Debug\MathNet.Numerics.xml
 C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.csproj.CopyComplete
+C:\Users\KIADY\Documents\S6\Mazoto - codage\Codage\Codage\obj\Debug\Codage.Form2.resources

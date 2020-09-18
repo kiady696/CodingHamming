@@ -15,6 +15,12 @@ namespace Codage
         public Form1()
         {
             InitializeComponent();
+            List<string> typesDeCodage = new List<string>();
+            typesDeCodage.Add("Hamming");
+            typesDeCodage.Add("Répétition pure");
+            typesDeCodage.Add("Parité");
+            this.typeCodage.DataSource = typesDeCodage;
+            
         }
 
         private void coder_Click(object sender, EventArgs e)
@@ -68,7 +74,7 @@ namespace Codage
                     Console.WriteLine("le ième lettre: " + unBloc);
 
                     motsDeCode.Add(unBloc);
-                    break; //divisible par 4 izay ilay mots de code brute
+                    break; 
                 }
                 if (repere > longueurBrute) //raha tsy divisible par 4 kosa de recuperer-na anaty string kely ilay ambiny any am farany
                 {
@@ -181,6 +187,49 @@ namespace Codage
             //10001101101001111010011010011100001  WITH ERRORMAX = 1
             //10111101101001111010001110011100001  WITH ERRORMAX = 2
 
+            //alaina 7 par 7 aloha ilay string lava be
+            int count = messageReçuDecode.Length; //tjrs divisible par 7
+            List<string> LettresEnBase2 = new List<string>();
+            string pourUneLettre = "";
+            int count7 = 0;
+            while(1 == 1)
+            {
+                pourUneLettre = messageReçuDecode.Substring(count7, 7);
+                Console.WriteLine("La lettre en binaire: " + pourUneLettre);
+                LettresEnBase2.Add(pourUneLettre);
+                count7 = count7 + 7;
+                int repere = count7 + 7;
+                if(repere == count)
+                {
+                    pourUneLettre = messageReçuDecode.Substring(count7, 7);
+                    Console.WriteLine("La lettre en binaire: " + pourUneLettre);
+                    LettresEnBase2.Add(pourUneLettre);
+                    
+                    break;
+                }
+            }
+
+            //Azo ny liste an'ireo lettres fa en base 2
+            //averina ho utf8 int byte 
+            string resultatFinal = "";
+            foreach(string s in LettresEnBase2)
+            {
+                //pour un string "0101101" , avadika ascii ilay binaire
+                string laLettre = Utils.BinaryToString(s);
+                resultatFinal += laLettre;
+                Console.WriteLine("la lettre: "+laLettre);
+
+            }
+
+            Form2 form2 = new Form2();
+            form2.resultatF.Text = resultatFinal;
+            form2.Show();
+            
+
+            //test hoe tonga ve de afaka atao mitambatra daholo izy tsy mila avadika 7-blocs
+            /*string hexa = Utils.BinaryStringToHexString(messageReçuDecode);
+            string resultat = Utils.hexToASCII(hexa);
+            Console.WriteLine("LE RESULTAT FINAL: " + resultat);*/
 
             //oetina any amna form hi afficher-na resultat ny mots de code sy ilay string kely apetaka am farany
             //decoder-na alana ny double any am positions 0,1 sy 3 de apetaka ilay string kely am farany 
