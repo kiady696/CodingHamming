@@ -29,7 +29,7 @@ namespace Codage
             string original = this.aEncoder.Text.Trim();
             Console.WriteLine("Le message original: "+original);
             //Byte[] motDeCodeBrute = System.Text.Encoding.ASCII.GetBytes(original);
-            
+
             /*foreach (char ch in original)
             {
                 string c1 = ch.ToString();
@@ -37,7 +37,7 @@ namespace Codage
                 binaire += Convert.ToByte(c1, 2);
             }*/
 
-            UTF8Encoding encoding = new UTF8Encoding(); 
+            /*UTF8Encoding encoding = new UTF8Encoding(); 
             byte[] buf = encoding.GetBytes(original);
             foreach(byte b in buf)
             {
@@ -52,6 +52,9 @@ namespace Codage
             }
             //    K         i         a         d         y
             // 1001011 + 1101001 + 1100001 + 1100100 + 1111001
+            Console.WriteLine("Le message en binaire: " + binaryStringBuilder.ToString());*/
+
+            string binaryStringBuilder = Utils.StringToBinary(original);
             Console.WriteLine("Le message en binaire: " + binaryStringBuilder.ToString());
 
             //longueur du mot de code brute
@@ -194,14 +197,14 @@ namespace Codage
             int count7 = 0;
             while(1 == 1)
             {
-                pourUneLettre = messageReçuDecode.Substring(count7, 7);
+                pourUneLettre = messageReçuDecode.Substring(count7, 8);
                 Console.WriteLine("La lettre en binaire: " + pourUneLettre);
                 LettresEnBase2.Add(pourUneLettre);
-                count7 = count7 + 7;
-                int repere = count7 + 7;
+                count7 = count7 + 8;
+                int repere = count7 + 8;
                 if(repere == count)
                 {
-                    pourUneLettre = messageReçuDecode.Substring(count7, 7);
+                    pourUneLettre = messageReçuDecode.Substring(count7, 8);
                     Console.WriteLine("La lettre en binaire: " + pourUneLettre);
                     LettresEnBase2.Add(pourUneLettre);
                     

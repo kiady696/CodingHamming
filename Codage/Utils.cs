@@ -11,13 +11,26 @@ namespace Codage
     class Utils
     {
 
+        //Le fonction mamadika string ho binary le fonction misy padleft(8,.. iny no apesaina amny voalohany 
+        public static string StringToBinary(string data)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (char c in data.ToCharArray())
+            {
+                sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
+            }
+            return sb.ToString();
+        }
+
+        //de ito ny fonction inverse an'iny apesaina am farany
         public static string BinaryToString(string data)
         {
             List<Byte> byteList = new List<Byte>();
 
             for (int i = 0; i < data.Length; i += 8)
             {
-                byteList.Add(Convert.ToByte(data.Substring(i, 7), 2));
+                byteList.Add(Convert.ToByte(data.Substring(i, 8), 2));
             }
             return Encoding.ASCII.GetString(byteList.ToArray());
         }
